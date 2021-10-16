@@ -1,0 +1,32 @@
+n = int(input("Digite o valor de n:"))
+k = int(input("Digite o valor de k:"))
+def fatorial(n):
+    fat = 1
+    while (n>1):
+        fat = fat * n
+        n = n-1
+    return fat
+print(fatorial(n))
+
+def numero_binomial(n,k):
+    return fatorial(n)/(fatorial(k)*fatorial(n-k))
+
+def testa_fatorial():
+    if fatorial(1) == 1:
+        print("funciona para 1")
+    else:
+        print("não funciona para 1")
+    if fatorial(2) == 2:
+        print("funciona para 2")
+    else:
+        print("não funciona para 2")
+    if fatorial(0) == 1:
+        print("funciona para 0")
+    else:
+        print("não funciona para 0")
+    if fatorial(5) == 120:
+        print("funciona para 5")
+    else:
+        print("não funciona para 5")
+testa_fatorial()
+print(numero_binomial(n,k))
