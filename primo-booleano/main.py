@@ -1,15 +1,19 @@
 n = int(input("Digite um número inteiro:"))
 total = 0
 i=1
-while i<=n:
-    if n%i==0:
-        total+=1
+
+def Primo(total,i, n):
+    while i<=n:
+        if n%i==0:
+            total+=1
     #print(i)
-    i+=1
+        i+=1
+    return total
 
-primo = True
+def Verificar(total):
+    if Primo(total, i, n) == 2:
+        return True
+    else:
+        return False
 
-if total==2:
-    print(primo)
-else:
-    print("não primo")
+print(Verificar(total))
